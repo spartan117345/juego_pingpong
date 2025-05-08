@@ -1,41 +1,37 @@
 import pygame
-import  sys
+import sys
 
 # Inicialización
 pygame.init()
 
 # Colores
 amarillo = (187, 173, 4)
-amarilo_oscuro = (142, 130, 10 )
 rojo = (255, 0, 0)
 azul = (0, 0, 255)
-verde = (52, 237, 11)
-rosado = (255, 195, 203)
-negro = (0,0,0)
-naranja = (194, 88, 0)
 blanco = (255, 255, 255)
+negro = (0, 0, 0)
+amarilo_oscuro = (142, 130, 10 )
+verde = (0, 255, 255)
+rosado = (255, 195, 203)
+naranja = (194, 88, 0)
 cian = (0, 255, 255)
 gris = (118, 120, 119)
 gris_oscuro = (80, 81, 81)
 gris_mas_oscuro = (58,59,58)
 gris_claro = (198, 200, 199)
-boca = (197, 71, 56)
+rosadito = (197, 71, 56)
 morado = (145, 74, 201 )
 cafe = (91, 10, 10 )
-
 # Crear ventana
 ventana = pygame.display.set_mode((800, 600))
-pygame.display.set_caption("juego pingpong")
-ventana.fill(negro)
+pygame.display.set_caption("Juego Ping Pong")
 
 # Reloj para controlar la velocidad de actualización
 clock = pygame.time.Clock()
 
-# variables del movimiento del player_1
-XX1 = 200
-YY1 = 300
-
-
+# Variables del movimiento de los jugadores
+XX1, YY1 = 200, 300
+XX2, YY2 = 600, 300
 
 # Bucle principal
 while True:
@@ -47,41 +43,66 @@ while True:
             pygame.quit()
             sys.exit()
 
-
-    pygame.draw.rect(ventana, blanco, (800, 20, 0,250))
-    pygame.draw.line(ventana, blanco, (0,150),(800,150),3)
+    # Limpiar pantalla con color negro
+    ventana.fill(negro)
+    
+    # Dibujar elementos
+    pygame.draw.rect(ventana, blanco, (800, 20, 0, 250))
+    pygame.draw.line(ventana, blanco, (0, 150), (800, 150), 3)
+    pygame.draw.line(ventana, blanco, (0, 450), (800, 450), 3)
+    pygame.draw.rect(ventana, rojo, (XX1, YY1, 20, 60))
+    pygame.draw.rect(ventana, azul, (XX2, YY2, 20, 60))
     pygame.draw.line(ventana, blanco, (0,450),(800,450),3)    
-    pygame.draw.rect(ventana, rojo, (YY1,XX1,20,60 ))
-    
-    # Movimiento de la gallina con teclas (se usa get_pressed() para un movimiento más fluido)
-    keys = pygame.key.get_pressed()  # Obtiene todas las teclas presionadas
+    pygame.draw.rect(ventana, blanco, (100,500,20,100 ))
+    pygame.draw.rect(ventana, blanco, (200,500,20,100,))
+    pygame.draw.rect(ventana, blanco, (300,500,20,100,))
+    pygame.draw.rect(ventana, blanco, (500,500,20,100,))
+    pygame.draw.rect(ventana, blanco, (600,500,20,100,))
+    pygame.draw.rect(ventana, blanco, (700,500,20,100,))
+    pygame.draw.rect(ventana, blanco, (1,500,20,100,))
+    pygame.draw.rect(ventana, blanco, (780,500,20,100,))
+    pygame.draw.rect(ventana,blanco,(1,480,319,20))
+    pygame.draw.rect(ventana,blanco,(500,480,400,20))
+    pygame.draw.rect(ventana, blanco, (335,590,150,20,))
+    pygame.draw.rect(ventana, rojo, (335,479,150,100,))
+    pygame.draw.rect(ventana, blanco, (335,1,150,10,))
+    pygame.draw.rect(ventana, azul, (335,20,150,100,))
+    pygame.draw.rect(ventana, blanco, (300,500,20,100,))
+    pygame.draw.rect(ventana, blanco , ( 1,0,20,100  ))
+    pygame.draw.rect(ventana, blanco , ( 100,0,20,100  ))
+    pygame.draw.rect(ventana, blanco , ( 200,0,20,100  ))
+    pygame.draw.rect(ventana, blanco , ( 300,0,20,100  ))
+    pygame.draw.rect(ventana, blanco , ( 500,0,20,100  ))
+    pygame.draw.rect(ventana, blanco , ( 600,0,20,100  ))
+    pygame.draw.rect(ventana, blanco , ( 700,0,20,100  ))
+    pygame.draw.rect(ventana, blanco , ( 800,0,20,100  ))
+    pygame.draw.rect(ventana, blanco , ( 780,0,20,100  ))
+    pygame.draw.rect(ventana,blanco,(1,100,319,20))
+    pygame.draw.rect(ventana,blanco,(500,100,600,20))
+
+    # Movimiento de las palas con teclas
+    keys = pygame.key.get_pressed()
     if keys[pygame.K_w]:  # Tecla W (arriba)
-        YY1 = YY1 - 3
+        YY1 -= 3
     if keys[pygame.K_s]:  # Tecla S (abajo)
-        YY1 = YY1 + 3
+        YY1 += 3
     if keys[pygame.K_a]:  # Tecla A (izquierda)
-        XX1 = XX1 - 3
+        XX1 -= 3
     if keys[pygame.K_d]:  # Tecla D (derecha)
-        XX1 = XX1 + 3
-    
-    
-    
-    
-    
+        XX1 += 3
+    if keys[pygame.K_UP]:  # Flecha arriba
+        YY2 -= 3
+    if keys[pygame.K_DOWN]:  # Flecha abajo
+        YY2 += 3
+    if keys[pygame.K_LEFT]:  # Flecha izquierda
+        XX2 -= 3
+    if keys[pygame.K_RIGHT]:  # Flecha derecha
+        XX2 += 3
+
+    # texto de la version del juego
+    fuente_arial = pygame.font.SysFont("Arial", 35, 1, 1)
+    texto = fuente_arial.render("version 1.1.0",3, gris_mas_oscuro)
+    ventana.blit(texto,(580,450))
+
     # Actualizar la pantalla
     pygame.display.flip()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
