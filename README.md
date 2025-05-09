@@ -17,5 +17,5 @@ los integrantes del grupo del juego son
     - oscar: oscarsanchez1@colegioguanenta.edu.co
     - julian: juliansanchez2@colegioguanenta.edu.co
 
-- grado: 10-7
 - colegio: colegio San José de Guanenta
+- especialidad: sistemas-1 2025
