@@ -3,6 +3,7 @@ import sys
 
 # Inicialización
 pygame.init()
+pygame.mixer.init()
 
 # Colores
 amarillo = (187, 173, 4)
@@ -50,6 +51,11 @@ movimientoY = 1
 puntos_1 = 0
 puntos_2 = 0
 tiempo = 0
+
+# sonido de fondo
+musica = pygame.mixer.music.load("sounds/musica.ogg")
+pygame.mixer.music.play(1,0,0)
+
 # Bucle principal
 while True:
     clock.tick(50)  # Limita los FPS a 50
@@ -146,7 +152,7 @@ while True:
 
     # texto de la version del juego
     fuente_arial = pygame.font.SysFont("Arial", 35, 1, 1)
-    texto = fuente_arial.render("version 1.4.0",3, gris_mas_oscuro)
+    texto = fuente_arial.render("version 1.5.0",3, gris_mas_oscuro)
     ventana.blit(texto,(580,450))
 
     # texto de los puntos del juego
@@ -213,6 +219,12 @@ while True:
         
     if tiempo >= 740:
         YY4 = -600
+        
+    if XX3 <= 0:
+        puntos_2 = puntos_2 + 1
+        
+    if XX3 >= 790:
+        puntos_1 = puntos_1 + 1
     
     # Actualizar la pantalla
     pygame.display.flip()

@@ -22,6 +22,11 @@ gris_claro = (198, 200, 199)
 rosadito = (197, 71, 56)
 morado = (145, 74, 201 )
 cafe = (91, 10, 10 )
+morado_puro = (131, 0, 255)
+
+
+
+
 # Crear ventana
 ventana = pygame.display.set_mode((800, 600))
 pygame.display.set_caption("Juego Ping Pong")
