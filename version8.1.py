@@ -223,7 +223,7 @@ while True:
     if XX1 <= 0:
         XX1 = XX1 + 5
 
-    if XX2 >= 780:
+    if XX2 >= 740:
         XX2 = XX2 - 5
 
     if XX1 >= 290:
@@ -263,3 +263,4 @@ while True:
         YY5 = 100
     # Actualizar la pantalla
     pygame.display.flip()
+    
