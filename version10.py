@@ -54,7 +54,7 @@ YY9 = -100
 YY10 = -100
 YY11 = -100
 YY12 = -100
-movimientoX = 5
+movimientoX = 0
 movimientoY = 1 
 # varibales de puntos
 puntos_1 = 0
@@ -145,14 +145,15 @@ while True:
     if keys[pygame.K_RIGHT]:  # Flecha derecha
         XX2 += 5
 
-    # tiempo de inicio de juego
+    # pantalla de carga
     tiempo = tiempo + 1
     tiempo2 = tiempo2 + 2
     if keys[pygame.K_RETURN]:
         tiempo2 = 20
         YY4 = -600
         XX5 = -300
-
+        movimientoX = 10
+        
     a = puntos_1
     b = puntos_2
 
@@ -170,7 +171,7 @@ while True:
 
     # texto de la version del juego
     fuente_arial = pygame.font.SysFont("Arial", 35, 1, 1)
-    texto = fuente_arial.render("version 1.9.0",3, gris_mas_oscuro)
+    texto = fuente_arial.render("version 1.10.0",3, gris_mas_oscuro)
     ventana.blit(texto,(580,450))
 
     # texto de los puntos del juego
@@ -196,14 +197,14 @@ while True:
 
     if XX3 >= XX2 and XX3 <= XX23 and YY3 >= YY2 and YY3 <= YY23:
         if keys[pygame.K_SPACE]:
-            movimientoX = -5
+            movimientoX = -10
     
     XX24 = XX1 + 50
     YY24 = YY1 + 50
 
     if XX3 >= XX1 and XX3 <= XX24 and YY3 >= YY1 and YY3 <= YY24:
         if keys[pygame.K_e]:
-            movimientoX = 5
+            movimientoX = 10
  
 
     if YY1 >= 390:
@@ -248,16 +249,15 @@ while True:
 
     if puntos_1 >= 5:
         texto = fuente_arial.render("VICTORIA DEL JUGADOR 1",3, amarillo)
-        ventana.blit(texto,(160,248))
+        ventana.blit(texto,(160,220))
         movimientoX = 0
         movimientoY = 0
         
     if puntos_2 >= 5:
         texto = fuente_arial.render("VICTORIA DEL JUGADOR 2",3, amarillo)
-        ventana.blit(texto,(160,240))       
+        ventana.blit(texto,(160,220))       
         movimientoX = 0
         movimientoY = 0
 
     # Actualizar la pantalla
     pygame.display.flip()
-    

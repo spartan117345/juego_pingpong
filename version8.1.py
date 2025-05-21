@@ -30,7 +30,7 @@ morado_puro = (131, 0, 255)
 
 # Crear ventana
 ventana = pygame.display.set_mode((800, 600))
-pygame.display.set_caption("Juego Ping Pong")
+pygame.display.set_caption("Dream stellar")
 
 # Reloj para controlar la velocidad de actualización
 clock = pygame.time.Clock()
@@ -172,7 +172,7 @@ while True:
 
     # texto de la version del juego
     fuente_arial = pygame.font.SysFont("Arial", 35, 1, 1)
-    texto = fuente_arial.render("version 1.7.0",3, gris_mas_oscuro)
+    texto = fuente_arial.render("version 1.8.1",3, gris_mas_oscuro)
     ventana.blit(texto,(580,450))
 
     # texto de los puntos del juego
