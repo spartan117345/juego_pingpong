@@ -153,9 +153,6 @@ while True:
         YY4 = -600
         XX5 = -300
         movimientoX = 10
-        
-    a = puntos_1
-    b = puntos_2
 
     if tiempo2 >= 50:
         # movimiento de la pelota
