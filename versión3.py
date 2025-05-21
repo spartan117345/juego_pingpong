@@ -29,7 +29,7 @@ morado_puro = (131, 0, 255)
 
 # Crear ventana
 ventana = pygame.display.set_mode((800, 600))
-pygame.display.set_caption("Dream stellar")
+pygame.display.set_caption("Juego Ping Pong")
 
 # Reloj para controlar la velocidad de actualización
 clock = pygame.time.Clock()

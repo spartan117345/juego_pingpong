@@ -24,7 +24,7 @@ morado = (145, 74, 201 )
 cafe = (91, 10, 10 )
 # Crear ventana
 ventana = pygame.display.set_mode((800, 600))
-pygame.display.set_caption("Juego Ping Pong")
+pygame.display.set_caption("Dream stellar")
 
 # Reloj para controlar la velocidad de actualización
 clock = pygame.time.Clock()

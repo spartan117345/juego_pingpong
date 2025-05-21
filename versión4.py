@@ -29,10 +29,11 @@ morado_puro = (131, 0, 255)
 
 # Crear ventana
 ventana = pygame.display.set_mode((800, 600))
-pygame.display.set_caption("Dream stellar")
+pygame.display.set_caption("Juego Ping Pong")
 
 # Reloj para controlar la velocidad de actualización
 clock = pygame.time.Clock()
+
 
 # Variables del movimiento de los jugadores
 XX1 = 200
@@ -44,8 +45,7 @@ XX3 = 410
 YY4 = -600
 XX4 = 0
 movimientoX = 3
-movimientoY = 1
-
+movimientoY = 1 
 # varibales de puntos
 puntos_1 = 0
 puntos_2 = 0
@@ -90,8 +90,6 @@ while True:
     pygame.draw.rect(ventana, blanco, (800, 20, 0, 250))
     pygame.draw.line(ventana, blanco, (0, 150), (800, 150), 3)
     pygame.draw.line(ventana, blanco, (0, 450), (800, 450), 3)
-    pygame.draw.rect(ventana, rojo, (XX1, YY1, 20, 60))
-    pygame.draw.rect(ventana, azul, (XX2, YY2, 20, 60))
     pygame.draw.line(ventana, blanco, (0,450),(800,450),3)    
     pygame.draw.rect(ventana, blanco, (100,500,20,100 ))
     pygame.draw.rect(ventana, blanco, (200,500,20,100,))
@@ -120,9 +118,14 @@ while True:
     pygame.draw.rect(ventana,blanco,(1,100,319,20))
     pygame.draw.rect(ventana,blanco,(500,100,600,20))
     pygame.draw.line(ventana, blanco, (410,150),(410,450),4)
+    logo = pygame.image.load("img/logo.png")
+    logo = pygame.transform.scale(logo, (150,150))
+    ventana.blit(logo, (338 , 250))
+    pygame.draw.rect(ventana, rojo, (XX1, YY1, 20, 60))
+    pygame.draw.rect(ventana, azul, (XX2, YY2, 20, 60))
     pygame.draw.circle(ventana, morado,(XX3,YY3),11,11)
 
-    # Movimiento de las palas con teclas
+    # Movimiento de las palas cOn teclas
     keys = pygame.key.get_pressed()
     if keys[pygame.K_w]:  # Tecla W (arriba)
         YY1 -= 3
@@ -143,7 +146,7 @@ while True:
 
     # texto de la version del juego
     fuente_arial = pygame.font.SysFont("Arial", 35, 1, 1)
-    texto = fuente_arial.render("version 1.3.0",3, gris_mas_oscuro)
+    texto = fuente_arial.render("version 1.4.0",3, gris_mas_oscuro)
     ventana.blit(texto,(580,450))
 
     # texto de los puntos del juego
@@ -154,6 +157,10 @@ while True:
     fuente_arial = pygame.font.SysFont("Arial", 50, 1, 1)
     texto = fuente_arial.render(str(puntos_2),3, negro)
     ventana.blit(texto,(390,50))
+    
+    carga = pygame.image.load("img/carga.png")
+    carga = pygame.transform.scale(carga,(800,600) )
+    ventana.blit(carga, (XX4, YY4))
 
     a = -1
     b = 1
@@ -200,11 +207,12 @@ while True:
     if YY3 <= 150:
         movimientoY = 1
 
-    if puntos_1 >= 0:
-        # texto de los puntos del juego
-        fuente_arial = pygame.font.SysFont("Arial", 50, 1, 1)
-        texto = fuente_arial.render(str(puntos_1),True, negro)
-        ventana.blit(texto,(390,510))
+        
+    if tiempo <= 740:
+        YY4 = 0
+        
+    if tiempo >= 740:
+        YY4 = -600
     
     # Actualizar la pantalla
     pygame.display.flip()
