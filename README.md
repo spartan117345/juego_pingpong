@@ -93,3 +93,50 @@ las mecnicas son dos las cuales son:
     - morado = (145, 74, 201 )
     - cafe = (91, 10, 10 )
     - morado_puro = (131, 0, 255)
+
+# versiones
+- versión 1
+- versión 2
+- versión 3
+- versión 4
+- versión 5
+- versión 6.0
+- versión 6.1
+- versión 6.2
+- versión 7
+- versión 8.0
+- versión 8.1
+- versión 9
+
+## versión 1
+en esta version se creo el mapa, los personajes los cuales eran rectangulos y el movimiento de los personajes
+
+## versión 2
+en esta version se pusieron los limites de los personajes para que no se salgan del mapa y se puso la pelota la cual no se movia
+
+## versión 3
+en esta versión se puso el movimiento de la pelota, el marcador el cual no funciona y las coliciones
+
+## versión 4
+se puso la pantalla de carga y el logo del juego en mitad de la cancha
+
+## versión 5 
+al juego se le puso musica de carga
+
+## versión 6.0
+se cargo la imagen del jugador 1
+
+## versión 6.1
+se cargo la imagen del jugador 2
+
+## versión 7
+es una versión muy dificil del juego ya que la velocidad de la pelota aumento y se quito la pantalla de carga por una pantalla de inicio
+
+## versión 8.0
+en esta versión se hiso que la colision de la pelota con los personajes fuera manual
+
+## versión 8.1
+se arreglo un bug con el personaje 2
+
+## versión 9
+el marcador funciona y la partida acaba a los 5 puntos de cualquier personaje
