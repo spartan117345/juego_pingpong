@@ -41,7 +41,7 @@ XX1 = 200
 YY1 = 280
 XX2 = 600
 YY2 = 280
-YY3 = 315
+YY3 = 295
 XX3 = 410
 YY4 = 0
 XX4 = 0
@@ -56,12 +56,14 @@ YY11 = -100
 YY12 = -100
 movimientoX = 0
 movimientoY = 1 
+
 # varibales de puntos
 puntos_1 = 0
 puntos_2 = 0
 tiempo = 0
 tiempo2 = 0
 tiempo3 = 0
+velocidad = 0
 
 # sonido de fondo
 musica = pygame.mixer.music.load("sounds/musica.ogg")
@@ -79,7 +81,7 @@ while True:
 
     # Limpiar pantalla con color negro
     ventana.fill(negro)
-    
+
     pygame.draw.rect(ventana,blanco,(500,100,600,20))
     pygame.draw.line(ventana, blanco, (410,150),(410,450),4)
 
@@ -114,19 +116,30 @@ while True:
     pygame.draw.rect(ventana, blanco , ( 780,0,20,100  ))
     pygame.draw.rect(ventana,blanco,(1,100,319,20))
     pygame.draw.rect(ventana,blanco,(500,100,600,20))
+
+    # se carga el logo del juego y se pone en mitad de la cancha
     logo = pygame.image.load("img/logo.png")
     logo = pygame.transform.scale(logo, (150,150))
-    ventana.blit(logo, (338 , 250))
+    ventana.blit(logo, (338 , 230))
+
+
+    # esterek de la primera version de los personajes
     pygame.draw.rect(ventana, rojo, (XX1, YY1, 20, 60))
     pygame.draw.rect(ventana, azul, (XX2, YY2, 20, 60))
+
+    # se carga el jugador 1
     rojo_player = pygame.image.load("img/rojo.png")
     rojo_player = pygame.transform.scale(rojo_player, (50,60))
     ventana.blit(rojo_player, (XX1 , YY1))
+
+    # se carga el jugador 2
     azul_player = pygame.image.load("img/azul.png")
     azul_player = pygame.transform.scale(azul_player, (60, 60))
     ventana.blit(azul_player, (XX2, YY2))
+
+    # generamos la pelota
     pygame.draw.circle(ventana, morado,(XX3,YY3),11,11)
-    # Movimiento de las palas cOn teclas
+    # Movimiento de los personajes con teclas
     keys = pygame.key.get_pressed()
     if keys[pygame.K_w]:  # Tecla W (arriba)
         YY1 -= 5
@@ -153,17 +166,21 @@ while True:
         YY4 = -600
         XX5 = -300
         movimientoX = 10
+        velocidad = 1000
 
     if tiempo2 >= 50:
         # movimiento de la pelota
         XX3 = XX3 + movimientoX   
         YY3 =  movimientoY + YY3
-        
+
+    # puntuaciones    
     if XX3 >= 790:
         puntos_1 = puntos_1 + 1
 
     if XX3 <= 0:
         puntos_2 = puntos_2 + 1
+
+    velocidad = velocidad + 1
     
 
     # texto de la version del juego
@@ -171,21 +188,24 @@ while True:
     texto = fuente_arial.render("version 1.10.0",3, gris_mas_oscuro)
     ventana.blit(texto,(580,450))
 
-    # texto de los puntos del juego
+    # texto de los puntos del jugador 1
     fuente_arial = pygame.font.SysFont("Arial", 50, 1, 1)
     texto = fuente_arial.render(str(puntos_1),3, negro)
     ventana.blit(texto,(390,510))
 
+    # texto de los puntos del jugador 2
     fuente_arial = pygame.font.SysFont("Arial", 50, 1, 1)
     texto = fuente_arial.render(str(puntos_2),3, negro)
     ventana.blit(texto,(390,50))
     
-    carga = pygame.image.load("img/carga.png")
+    # cargamos la imagen de la pantalla del inicio
+    carga = pygame.image.load("img/carga2.png")
     carga = pygame.transform.scale(carga,(800,600) )
     ventana.blit(carga, (XX4, YY4))
 
+    # texto que sale en la pantalla de inicio
     fuente_arial = pygame.font.SysFont("Arial", 35, 1, 1)
-    texto = fuente_arial.render("press Retrun",3, gris_mas_oscuro)
+    texto = fuente_arial.render("press Enter",3, blanco)
     ventana.blit(texto,(XX5,450))
     
     # hitbox de los personajes    
@@ -203,7 +223,7 @@ while True:
         if keys[pygame.K_e]:
             movimientoX = 10
  
-
+    # condiciones utilizadas para que los personajes y la pelota no se salgan del mapa
     if YY1 >= 390:
         YY1 = YY1 - 5
 
@@ -230,31 +250,31 @@ while True:
 
     if XX3 >= 790 or XX3 <= 0:
             XX3 = 410
-            YY3 = 315
+            YY3 = 295
             tiempo = 800
     
 
     
-    if YY3 >= 440:
+    if YY3 >= 430:
         movimientoY = -1
 
-    if YY3 <= 160:
+    if YY3 <= 170:
         movimientoY = 1
         
-    if keys[pygame.K_e]:  # Flecha izquierda
-        YY4 = -600
-
-    if puntos_1 >= 5:
+    # condicion para que el juego finalice cuando un jugador llegue a los 5 puntos
+    if puntos_1 >= 8:
         texto = fuente_arial.render("VICTORIA DEL JUGADOR 1",3, amarillo)
         ventana.blit(texto,(160,220))
         movimientoX = 0
         movimientoY = 0
         
-    if puntos_2 >= 5:
+    if puntos_2 >= 8:
         texto = fuente_arial.render("VICTORIA DEL JUGADOR 2",3, amarillo)
         ventana.blit(texto,(160,220))       
         movimientoX = 0
         movimientoY = 0
+
+
 
     # Actualizar la pantalla
     pygame.display.flip()
