@@ -108,6 +108,7 @@ las mecnicas son dos las cuales son:
 - versión 8.1
 - versión 9
 - versión 10
+- version 11
 
 ## versión 1
 en esta version se creo el mapa, los personajes los cuales eran rectangulos y el movimiento de los personajes.
@@ -143,4 +144,7 @@ se arreglo un bug con el personaje 2.
 el marcador funciona y la partida acaba a los 5 puntos de cualquier personaje.
 
 ## versión 10
-esta versión fue de arreglo de bugs
+esta versión fue de arreglo de buga
+
+# version 11
+en est version se actualiso el fondo del juego
