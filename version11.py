@@ -134,9 +134,9 @@ while True:
     mictiano4 = pygame.transform.scale(mictiano4,(70,70))
     ventana.blit(mictiano4, (120,510))
     
-    nesticor = pygame.image.load("img/nesticor.png")
-    nesticor = pygame.transform.scale(nesticor,(130,130))
-    ventana.blit(nesticor,(5,490))
+    nestor = pygame.image.load("img/nesticor.png")
+    nestor = pygame.transform.scale(nestor,(130,130))
+    ventana.blit(nestor,(5,490))
 
     aquino = pygame.image.load("img/aquino.png")
     aquino = pygame.transform.scale(aquino,(100,100))
@@ -188,6 +188,7 @@ while True:
     # pantalla de carga
     tiempo = tiempo + 1
     tiempo2 = tiempo2 + 2
+    
     if keys[pygame.K_RETURN]:
         tiempo2 = 20
         YY4 = -600
