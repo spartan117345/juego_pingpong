@@ -145,8 +145,11 @@ while True:
     pepe = pygame.image.load("img/pepe.png")
     pepe = pygame.transform.scale(pepe,(200,200))
     ventana.blit(pepe, (580,-50))
-
-
+    
+    panterarosa = pygame.image.load("img/panterarosa.png")
+    panterarosa = pygame.transform.scale(panterarosa,(100,100))
+    ventana.blit(panterarosa,(520,500))
+    
     # esterek de la primera version de los personajes
     pygame.draw.rect(ventana, rojo, (XX1, YY1, 20, 60))
     pygame.draw.rect(ventana, azul, (XX2, YY2, 20, 60))
