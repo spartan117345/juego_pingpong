@@ -134,9 +134,9 @@ while True:
     mictiano4 = pygame.transform.scale(mictiano4,(70,70))
     ventana.blit(mictiano4, (120,510))
     
-    nestor = pygame.image.load("img/nesticor.png")
-    nestor = pygame.transform.scale(nestor,(130,130))
-    ventana.blit(nestor,(5,490))
+    cualquierpersona = pygame.image.load("img/cualquierpersona.png")
+    cualquierpersona = pygame.transform.scale(cualquierpersona,(130,130))
+    ventana.blit(cualquierpersona,(5,490))
 
     aquino = pygame.image.load("img/aquino.png")
     aquino = pygame.transform.scale(aquino,(100,100))
