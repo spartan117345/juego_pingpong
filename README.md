@@ -1,4 +1,4 @@
-# juego de ping pong
+# Dream Stellar
 - es un juego con varias mecanicas simples y divertidas como un bot, el movimiento del jugador y el rebote de la pelota
     - bot: el bot es un codigo con el cual el jugador se va ha enfrentar 
     - movimiento del jugador: el jugador va a tener dos simples movimientos los cuales van ha hacer ir hacia arriba y ir hacia abajo para poder hacer rebotar la pelota
@@ -68,13 +68,49 @@ las mecnicas son dos las cuales son:
     - YY24
     - logo
         - es la imagen que aparece en la mitad del campo de juego
+
+            ![diagrama de flujo](img/logo.png "diagrama de flujo")
     - rojo_player
         - es la imagen del jugador 1
+
+            ![diagrama de flujo](img/rojo.png "diagrama de flujo")
     - azul_player
         - es la imagen del jugador 2
+
+            ![diagrama de flujo](img/azul.png "diagrama de flujo")
     - carga
         - es la imagen que aparece al iniciar el juego
-        # colores
+
+            ![diagrama de flujo](img/carga2.png "diagrama de flujo")
+        
+        # publico
+
+        - panterarosa
+            - es la imagen de la pantera rosa en el publico que aparece en la parte inferior derecha de la pantalla
+
+            ![diagrama de flujo](img/panterarosa.png "diagrama de flujo")
+
+        - cualquierpersona   
+            - es una persona que aparece en el publico en la parte inferior izquierda de la pantalla
+
+            ![diagrama de flujo](img/cualquierpersona.png "diagrama de flujo") 
+
+        - pepe
+            - pepe es un personaje parecido a Qbert que aparece en el publico que aparece en la parte superior derecha de la pantalla
+
+            ![diagrama de flujo](img/pepe.png "diagrama de flujo")
+
+        - alien
+            - son los aliens que aparecen en el publico
+
+            ![diagrama de flujo](img/mictiano.png "diagrama de flujo")
+
+        - by 2002(aquino)
+            - aquino es un persoanje que aparece en el publico estando en lña parte superior izquierda de la pantalla
+
+            ![diagrama de flujo](img/aquino.png "diagrama de flujo")
+        
+    # colores
     - amarillo = (187, 173, 4)
     - rojo = (255, 0, 0)
     - azul = (0, 0, 255)
