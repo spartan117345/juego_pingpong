@@ -22,20 +22,20 @@ los integrantes del grupo del juego son
 
 # objetivo del juego
 
-el objetivo del juego es gnarle a un amigo en un juego de pingpong en el cual los personajes son dos among us uno rojo y otro azul
+el objetivo del juego es gnarle a un amigo en un juego de pingpong en el cual los personajes son dos among us uno rojo y otro azul.
 
 # mecanicas
 
 las mecnicas son dos las cuales son: 
 - la pelota:
     - tiene dos variables son "XX3" y "YY3" ls cuales son la coordenada "x" y "y" respectivmente
-    - la pelota se mueve utilizando dos variables "movimientoX" y "movimientoY" las cuales hacen que la pelota su mueva en diagonal
+    - la pelota se mueve utilizando dos variables "movimientoX" y "movimientoY" las cuales hacen que la pelota su mueva en diagonal.
 
 - jugador1:
-    - el jugador1 tiene dos varibles igual que la pelota "XX1" y  "YY1" los cuales pueden ser modificados al presionar las teclas "w, a, s, d" para el movimiento del personaje
+    - el jugador1 tiene dos varibles igual que la pelota "XX1" y  "YY1" los cuales pueden ser modificados al presionar las teclas "w, a, s, d" para el movimiento del personaje.
 
 - jugador2:
-    - el jugador1 tiene dos varibles igual que la pelota "XX2" y  "YY2" los cuales pueden ser modificados al presionar las teclas de as flechas para el movimiento del personaje
+    - el jugador1 tiene dos varibles igual que la pelota "XX2" y  "YY2" los cuales pueden ser modificados al presionar las teclas de as flechas para el movimiento del personaje.
 
 # variables
 - en el juego se utilizan muchas variables:
@@ -53,24 +53,24 @@ las mecnicas son dos las cuales son:
     - movimientoY
     - movimientoX
     - clock
-        - variable utilizada para cargar los fps
+        - variable utilizada para cargar los fps.
     - ventana
-        - es la variable utilizada para cargar la ventana en la cual aparece y carga el juego
+        - es la variable utilizada para cargar la ventana en la cual aparece y carga el juego.
     - tiempo
-        - variable utilizada para la pantalla de carga
+        - variable utilizada para la pantalla de carga.
     - puntos_1
     - puntos_2
-        - puntos hechos por los jugadores
+        - puntos hechos por los jugadores.
 
     - tiempo4
-        - es utilisado para poder utilizar la tienda
+        - es utilisado para poder utilizar la tienda.
     - musica
     - XX23
     - XX24
     - YY23
     - YY24
     - logo
-        - es la imagen que aparece en la mitad del campo de juego
+        - es la imagen que aparece en la mitad del campo de juego.
 
             ![logo del juego](img/logo.png "es la imagen que representa el juego")
     - rojo_player
