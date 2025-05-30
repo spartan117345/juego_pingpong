@@ -72,7 +72,7 @@ las mecnicas son dos las cuales son:
     - logo
         - es la imagen que aparece en la mitad del campo de juego
 
-            ![diagrama de flujo](img/logo.png "diagrama de flujo")
+            ![logo del juego](img/logo.png "es la imagen que representa el juego")
     - rojo_player
         - es la imagen del jugador 1
 
@@ -80,11 +80,11 @@ las mecnicas son dos las cuales son:
     - azul_player
         - es la imagen del jugador 2
 
-            ![diagrama de flujo](img/azul.png "diagrama de flujo")
+            ![skin predeterminada del jugador 2](img/azul.png "jugador 2")
     - carga
         - es la imagen que aparece al iniciar el juego
 
-            ![diagrama de flujo](img/carga2.png "diagrama de flujo")
+            ![pantalla](img/carga2.png "pantalla del juego")
 
     # peronajes de la tienda
     - mago
@@ -93,7 +93,7 @@ las mecnicas son dos las cuales son:
             ![personaje mago](img/mago.png "personaje mago")
     - aquaman
         - es una skin del jugador 2
-        
+
             ![personaje aquaman](img/aquaman.png "persoanje aquaman")
         
         # publico
@@ -101,27 +101,27 @@ las mecnicas son dos las cuales son:
         - panterarosa
             - es la imagen de la pantera rosa en el publico que aparece en la parte inferior derecha de la pantalla
 
-            ![diagrama de flujo](img/panterarosa.png "diagrama de flujo")
+            ![es la pantera rosa que aparece en el publico](img/panterarosa.png "pantera rosa con bandera")
 
         - cualquierpersona   
             - es una persona que aparece en el publico en la parte inferior izquierda de la pantalla
 
-            ![diagrama de flujo](img/cualquierpersona.png "diagrama de flujo") 
+            ![es una persona que aparece en el publico](img/cualquierpersona.png "persona con gafas") 
 
         - pepe
             - pepe es un personaje parecido a Qbert que aparece en el publico que aparece en la parte superior derecha de la pantalla
 
-            ![diagrama de flujo](img/pepe.png "diagrama de flujo")
+            ![personaje que aparece en el publico](img/pepe.png "personaje parecido a Q blet")
 
         - alien
             - son los aliens que aparecen en el publico
 
-            ![diagrama de flujo](img/mictiano.png "diagrama de flujo")
+            ![personaje que aparece varias veces en el publico](img/mictiano.png "es un alien")
 
         - by 2002(aquino)
             - aquino es un persoanje que aparece en el publico estando en lña parte superior izquierda de la pantalla
 
-            ![diagrama de flujo](img/aquino.png "diagrama de flujo")
+            ![es el personaje de aquino que aparece en el publico](img/aquino.png "aquino by 2002")
         
     # colores
     - amarillo = (187, 173, 4)
@@ -199,5 +199,5 @@ esta versión fue de arreglo de buga
 # version 11
 en est version se actualiso el fondo del juego
 
-# version 12:
+# version 12
 en esta version se creo la tienda con dos personajes nuevos
