@@ -60,7 +60,10 @@ las mecnicas son dos las cuales son:
         - variable utilizada para la pantalla de carga
     - puntos_1
     - puntos_2
-        - puntos hechospor los jugadores
+        - puntos hechos por los jugadores
+
+    - tiempo4
+        - es utilisado para poder utilizar la tienda
     - musica
     - XX23
     - XX24
@@ -82,6 +85,16 @@ las mecnicas son dos las cuales son:
         - es la imagen que aparece al iniciar el juego
 
             ![diagrama de flujo](img/carga2.png "diagrama de flujo")
+
+    # peronajes de la tienda
+    - mago
+        - es una skin del jugador 1
+
+            ![personaje mago](img/mago.png "personaje mago")
+    - aquaman
+        - es una skin del jugador 2
+        
+            ![personaje aquaman](img/aquaman.png "persoanje aquaman")
         
         # publico
 
@@ -145,6 +158,7 @@ las mecnicas son dos las cuales son:
 - versión 9
 - versión 10
 - version 11
+- version 12
 
 ## versión 1
 en esta version se creo el mapa, los personajes los cuales eran rectangulos y el movimiento de los personajes.
@@ -184,3 +198,6 @@ esta versión fue de arreglo de buga
 
 # version 11
 en est version se actualiso el fondo del juego
+
+# version 12:
+en esta version se creo la tienda con dos personajes nuevos
