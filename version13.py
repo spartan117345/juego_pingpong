@@ -175,21 +175,21 @@ while True:
     # Movimiento de los personajes con teclas
     keys = pygame.key.get_pressed()
     if keys[pygame.K_w]:  # Tecla W (arriba)
-        YY1 -= 5
+        YY1 -= 7
     if keys[pygame.K_s]:  # Tecla S (abajo)
-        YY1 += 5
+        YY1 += 7
     if keys[pygame.K_a]:  # Tecla A (izquierda)
-        XX1 -= 5
+        XX1 -= 7
     if keys[pygame.K_d]:  # Tecla D (derecha)
-        XX1 += 5
+        XX1 += 7
     if keys[pygame.K_UP]:  # Flecha arriba
-        YY2 -= 5
+        YY2 -= 7
     if keys[pygame.K_DOWN]:  # Flecha abajo
-        YY2 += 5
+        YY2 += 7
     if keys[pygame.K_LEFT]:  # Flecha izquierda
-        XX2 -= 5
+        XX2 -= 7
     if keys[pygame.K_RIGHT]:  # Flecha derecha
-        XX2 += 5
+        XX2 += 7
 
     # pantalla de carga
     tiempo += 1
@@ -263,7 +263,7 @@ while True:
 
     # texto de la version del juego
     fuente_arial = pygame.font.SysFont("Arial", 35, 1, 1)
-    texto = fuente_arial.render("version 1.11.0",3, gris_mas_oscuro)
+    texto = fuente_arial.render("version 1.13.0",3, gris_mas_oscuro)
     ventana.blit(texto,(560,450))
 
     # texto de los puntos del jugador 1
