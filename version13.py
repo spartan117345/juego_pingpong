@@ -28,6 +28,7 @@ morado_puro = (131, 0, 255)
 
 
 
+
 # Crear ventana
 ventana = pygame.display.set_mode((800, 600))
 pygame.display.set_caption("Dream stellar")
@@ -50,6 +51,7 @@ XX5 = 300
 YY6 = -600
 XX6 = -100
 XX7 = 810
+X5 = 250
 movimientoX = 0
 movimientoY = 0
 # tienda
@@ -65,6 +67,7 @@ tiempo2 = 0
 tiempo3 = 0
 tiempo4 = 0
 velocidad = 0
+reinicio = 0
 
 # sonido de fondo
 musica = pygame.mixer.music.load("sounds/musica.ogg")
@@ -298,7 +301,21 @@ while True:
         if keys[pygame.K_e]:
             movimientoX = 50
 
-    
+    # reiniciar la partida
+    if keys[pygame.K_r] and reinicio >= 1:
+        tiempo = 0
+        tiempo3 = 3
+        tiempo4 = 0
+        tiempo2 = 20
+        YY4 = -600
+        XX5 = -300
+        movimientoX = 50
+        movimientoY = 2
+        velocidad = 1000
+        puntos_1 = 0
+        puntos_2 = 0
+        reinicio = 0
+
         # cargamos el fondo de la tienda
     fondo_tienda = pygame.image.load("img/fondo_tienda.png")
     fondo_tienda = pygame.transform.scale(fondo_tienda,(800,600))
@@ -357,12 +374,20 @@ while True:
         ventana.blit(texto,(180,200))
         movimientoX = 0
         movimientoY = 0
+        reinicio =+ 1
         
     if puntos_2 >= 8:
         texto = fuente_arial.render("VICTORIA DEL JUGADOR 2",3, amarillo)
         ventana.blit(texto,(180,200))       
         movimientoX = 0
         movimientoY = 0
+        reinicio =+ 1
+
+    if puntos_2 >= 8 or puntos_1 >= 8:
+        # texto que sale en la pantalla de inicio
+        fuente_arial = pygame.font.SysFont("Arial", 35, 1, 1)
+        texto = fuente_arial.render("PRESS R FOR RETURN",3, amarillo)
+        ventana.blit(texto,(X5,390))
 
 
 
