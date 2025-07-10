@@ -164,9 +164,6 @@ while True:
     ventana.blit(panterarosa,(520,500))
 
     
-    # se cargan las skins de la tienda
-
-    
     # cargamos el fondo de la tienda
     fondo_tienda = pygame.image.load("img/fondo_tienda.png")
     fondo_tienda = pygame.transform.scale(fondo_tienda,(800,600))
@@ -199,7 +196,7 @@ while True:
         tiempo2 = 20
         YY4 = -600
         XX5 = -300
-        movimientoX = 17
+        movimientoX = 50
         movimientoY = 2
         velocidad = 1000
         tiempo3 += 3
@@ -292,14 +289,14 @@ while True:
 
     if XX3 >= XX2 and XX3 <= XX23 and YY3 >= YY2 and YY3 <= YY23:
         if keys[pygame.K_SPACE]:
-            movimientoX = -19
+            movimientoX = -50
     
     XX24 = XX1 + 50
     YY24 = YY1 + 50
 
     if XX3 >= XX1 and XX3 <= XX24 and YY3 >= YY1 and YY3 <= YY24:
         if keys[pygame.K_e]:
-            movimientoX = 19
+            movimientoX = 50
 
     
         # cargamos el fondo de la tienda
